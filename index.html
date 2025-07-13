@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India's Best Lawyer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        :root{
+            --primary-color:#D1AB74;
+            --secondary-color:#38312C;
+        }
+        /* .animate{
+            animation:show 2.75s linear forwards;
+            animation-delay:1s;
+        }
+        @keyframes show{
+            from{
+                transform:scale(1);
+                opacity:1;
+            }
+            to{
+                transform:scale(4);
+                opacity:0;
+            }
+        }*/
+        @keyframes introAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    90% {
+        transform: scale(4);
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.animate-intro {
+    animation: introAnimation 3s linear forwards;
+    animation-delay: 1.45s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+    </style> 
+    
+</head>
+<body class="relative overflow-x-hidden bg-[var(--primary-color)]">
+    <div class="relative bodywrap duration-800 ease-in overflow-x-hidden">
+    <div id="intro" class="absolute top-0 left-0 h-[100vh] w-[100vw] bg-[var(--secondary-color)] flex items-center justify-center z-50 animate-intro">
+        <h1 class="xl:text-6xl text-3xl text-[var(--primary-color)] font-bold text-center">Kohli Advocates</h1>
+    </div>
+    <!-- <div class="fixed top-0 left-0 h-full w-full -z-10 opacity-85 bg-cover" style="background-image: url('./Assets/bgimage3.jpg');"></div> -->
+     <div class="absolute z-[-1] w-[150vw] h-[180vh] opacity-85"><img class="object-cover h-full w-full" src="./Assets/bgimage3.jpg"></div>
+
+
+    <!-- <div class="fixed h-[100vh] w-[100vw] z-[-1] opacity-85"><img class="object-cover object-fill"src="./Assets/bgimage3.jpg"></div> -->
+     <!-- <div class="absolute top-0 left-0 h-full w-full -z-10 opacity-85"
+     style="background-image: url('./Assets/bgimage3.jpg');">
+</div> -->
+
+    <header class="bg-[var(--secondary-color)] p-10 xl:bg-transparent">
+        <nav class="flex flex-col items-center gap-8 xl:flex xl:flex-row xl:gap-45">
+            <div><img src="./Assets/Logo.png" class="h-[20vmax] xl:contrast-200 xl:h-[15vmax]"></div>
+            <ul class="menu-items flex text-[var(--primary-color)] gap-4 flex-wrap text-lg xl:text-white xl:text-3xl">
+                <li class="underline underline-offset-10"><a href="#">Home</a></li>
+                <li><a href="./CaseStudies.html">Case Studies</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="text-white py-5 pb-0 m-0 xl:py-0">
+        <section class="profile-section flex flex-col items-center xl:flex-row-reverse xl:justify-evenly scroll-animate">
+                <div class="profile scroll-animate"><img src="./Assets/profile.png" class="profile-img h-[70vh] scale-x-[-1] scroll-animate">
+                </div>
+                <div class="flex flex-col items-center pb-10">
+                    <div class="profile-summary p-5 flex flex-col items-center xl:w-[38vw]">
+                        <h1 class="text-2xl scroll-animate">Expert Legal Counsel</h1>
+                        <br>
+                        <p class="text-4xl text-center font-serif xl:text-[6vmax] scroll-animate">Your Trusted Legal Experts</p>
+                    </div>
+                    <div class="btn">
+                        <button class="cursor-pointer bg-[var(--primary-color)] border-4 p-5 text-[var(--secondary-color)] rounded-sm border-double w-[60vw] text-xl font-semibold xl:w-[15vw] getStarted hover:opacity-75 active:border-solid active:opacity-65">Get Started</button>
+                    </div>
+                </div>
+        </section>
+        <section class="bg-[var(--secondary-color)] p-10 flex flex-col items-center text-[var(--primary-color)] scroll-animate">
+            <div class="flex flex-col items-center gap-5 mb-15 w-70 text-center xl:w-full xl:text-xl scroll-animate">
+                <h1 class="font-serif text-3xl xl:text-5xl scroll-animate">Areas of Expertise</h1>
+                <p class="text-md scroll-animate">We offer expert guidance and representation in a variety of legal matters.</p>
+            </div>
+            <div class="xl:flex xl:gap-10 text-center scroll-animate">
+            <div class="flex flex-col items-center gap-3 mb-10  xl:w-[15vw] scroll-animate">
+                <object type="image/svg+xml" data="./Assets/Bussinesslaw.svg" width="100" height="100"></object>
+                <h2 class="font-bold scroll-animate">Business law</h2>
+                <p>Legal guidance for businesses.</p>
+            </div>
+            <div class="flex flex-col items-center gap-3 mb-10 xl:w-[15vw] scroll-animate">
+                <object type="image/svg+xml" data="./Assets/Healthcarelaw.svg" width="100" height="100"></object>
+                <h2 class="font-bold scroll-animate">Healthcare Law</h2>
+                <p>Navigating healthcare regulations.</p>
+            </div>
+            <div class="flex flex-col items-center gap-3 mb-10 xl:w-[15vw] scroll-animate">
+                <object type="image/svg+xml" data="./Assets/corporatelaw.svg" width="100" height="100"></object>
+                <h2 class="font-bold scroll-animate">Corporate Law</h2>
+                <p>Trusted corporate legal expertise.</p>
+            </div>
+            <div class="flex flex-col items-center gap-3 mb-10 xl:w-[15vw] scroll-animate">
+                <object type="image/svg+xml" data="./Assets/familylaw.svg" width="100" height="100"></object>
+                <h2 class="font-bold scroll-animate">Family Law</h2>
+                <p>Family law solutions tailored to your needs.</p>
+            </div>
+            </div>
+        </section>
+        <section class="p-9 px-5 bg-[var(--primary-color)]">
+            <marquee class="xl:hidden scroll-animate">
+            <div class="image-container flex gap-8">
+                <img src="./Assets/image3.jpeg" alt="image1" class="h-[40vh] min-w-[90vw] rounded-xl scroll-animate">
+                <img src="./Assets/image4.jpeg" alt="image4" class="h-[40vh] rounded-xl scroll-animate">
+                <img src="./Assets/image2.jpeg" alt="image2" class="h-[40vh]  rounded-xl scroll-animate">
+            </div>
+        </marquee>
+        <div class="hidden xl:flex xl:justify-evenly scroll-animate">
+            <img src="./Assets/image3.jpeg" alt="image1" class="h-[50vh] w-[25vw] rounded-xl">
+            <img src="./Assets/image4.jpeg" alt="image4" class="h-[50vh] w-[25vw] rounded-xl">
+            <img src="./Assets/image2.jpeg" alt="image2" class="h-[50vh] w-[25vw] rounded-xl">
+        </div>
+        </section>
+        <section class="bg-[var(--primary-color)] text-[var(--secondary-color)] xl:flex xl:items-center xl:justify-center scroll-animate">
+            <div class="flex justify-center scroll-animate">
+                <img class="h-[80vh] xl:w-[50vw]" src="./Assets/courtimg.png">
+            </div>
+            <div class="description font-serif flex flex-col px-20 xl:px-10 py-15 gap-5 scroll-animate">
+                <h2 class="text-4xl scroll-animate">Why Choose Us</h2>
+                <p class="leading-6 scroll-animate">We offer compassionate, client-focused legal representation, combining deep legal knowledge with innovative solutions for complex issues.</p>
+                <button class="cursor-pointer border-4 rounded-sm border-double p-5 xl:w-[15vw] scroll-animate learnMore hover:border-solid">Learn More</button>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[var(--secondary-color)] text-[var(--primary-color)] text-center py-5 flex flex-col items-center gap-6 xl:flex-row xl:justify-between xl:px-10 xl:items-center">
+        <div class="hidden xl:inline-block"><img class="h-[20vh]" src="./Assets/logo.png"></div>
+        <p>&copy; 2025 . All Rights Reserved.</p>
+        <div class="flex gap-10">
+        <img src="./Assets/facebook.png" class="h-6">
+        <img src="./Assets/instagram.png" class="h-6">
+        <img src="./Assets/twitter.png" class="h-6">
+        </div>
+    </footer>
+</div>
+
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+    const intro = document.getElementById("intro");
+
+    // Wait for animation to complete (~3.75s including delay)
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 3750);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+const elements = document.querySelectorAll(".scroll-animate");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target); // animate only once
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+elements.forEach((el) => observer.observe(el));
+});
+    let bodywrap=document.querySelector(".bodywrap");
+    let getStarted=document.querySelector(".getStarted");
+    let learnMore=document.querySelector(".learnMore");
+    
+    getStarted.addEventListener('click',()=>{
+        bodywrap.style.transform="scale(1.5)";
+        bodywrap.style.opacity="0";
+        setTimeout(()=>{
+            window.location.href="./contact.html";
+        },800)
+    })
+    learnMore.addEventListener('click',()=>{
+        bodywrap.style.transform="scale(1.9)";
+        bodywrap.style.opacity="0";
+        setTimeout(()=>{
+            window.location.href="./caseStudies.html";
+        },800)
+    })
+   window.addEventListener("pageshow", () => {
+    bodywrap.style.transform = "scale(1)";
+    bodywrap.style.opacity = "1";
+});
+
+
+</script>
+<script src="./script.js">
+</script> 
+</body>
+</html>
